@@ -18,7 +18,7 @@ function sumar2(a:number,b:number):number{
     return a+b;   
 }
 
-function operasBas(n1:number, n2:number, n3:number):number{
+function operasBas(n1:number, _n2:number, n3:number):number{
     let tem = n1 * n3;
     return tem;
 }
@@ -53,3 +53,15 @@ const funcSumar=function(n1:number, n2:number):number{
 }
 
 console.log(funcSumar(4,9));
+
+// Parámetros Rest en funciones
+function calcular2(...valores:number[]){
+    let suma = 0;
+    for( let x=0; x < valores.length; x++){
+        suma+=valores[x];
+    } 
+    return suma;
+}
+
+console.log(calcular2(10,2,3,4));
+console.log(calcular2(1,2));
